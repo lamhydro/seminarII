@@ -1,0 +1,28 @@
+#/MecanicaDeFluidos.pdf
+/references/*
+#/exams/*
+#/labs/guias_lab_hidraulica94-2.pdf
+#/labs/calLab1.xlsx
+#/hwks/hwk02/*
+/lecs/*.zip
+
+## Core latex/pdflatex auxiliary files:
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+## Intermediate documents:
+*.dvi
+*.xdv
+
+# vim dom
+*.swp
