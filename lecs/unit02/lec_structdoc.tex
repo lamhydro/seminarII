@@ -24,7 +24,8 @@
 \usepackage{textpos}
 
 \usepackage{tikz}
-
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{positioning}
 %\tikzset{
 %  every overlay node/.style={
 %    draw=black,fill=white,rounded corners,anchor=south west,
@@ -105,12 +106,12 @@
 \end{frame}
 
 %%%%%%%%
-\section{Indice general de un documento de tesis or proyecto}
+\section{Indice general de un documento de t\'esis or proyecto}
 
 \begin{frame}{Indice del documento}
 \begin{columns}[T]
 \column{0.3\textwidth}
-El indice de un trabajo final de maestria, es la \alert{carta de navegacion del proyecto}. Esta puede cambiar y se puede modificar de acuerdo con las necesidades que surjan en la realizacion del proyecto. 
+El indice de un trabajo final de maestr\'ia, es la \alert{carta de navegación del proyecto}. Esta puede cambiar y se puede modificar de acuerdo con las necesidades que surjan en la realización del proyecto. 
 \column{0.7\textwidth}
 \centering
 \includegraphics[width=\textwidth]{thesisIndx}
@@ -134,7 +135,7 @@ Estructura general de un documento de proyecto de tesis:
 \item Introducci\'on
 \item Metodolog\'ia 
 \item Resultados
-\item Discusion
+\item Discusión
 \item Conclusiones
 \item Bibliograf\'ia
 \item Anexos
@@ -153,6 +154,43 @@ Estructura general de un documento de proyecto de tesis:
 \end{smallgreentext}
 };
 \end{frame}
+
+
+\begin{frame}{Creaci\'on de secciones}
+\begin{itemize}
+\item Muestran la estrategia o propósito del documento.
+\item Deben revelar la organizaci\'on del documento por si solos.
+\item Sirven como breve descanso mental para el lector. 
+\item Las secciones sirven como medio para la comprensión del texto. 
+\item Piensen sus secciones como tajadas de una torta, deben tener cierto nivel de relaci\'on.
+\item Deben seguir una misma estructura gramatical:
+\begin{table}
+\begin{tabular}{c  c }
+\textbf{Frases sustantivas} & \textbf{Frases en participio}\\
+Caso de estudio & Conocimiento del la zona de estudio \\
+Modelo de la cuenca & Modelaci\'on de cuenca \\
+Datos adquiridos & Adquicisi\'on de datos 
+\end{tabular}
+\end{table}
+\end{itemize}
+\tikzoverlay[text width=10.5cm] at (0.6cm,0.3cm) {
+\centering
+\begin{smallbluetext}
+\Large El propósito no es siempre que el documento sea leído completamente, si no es informar y persuadir al lector de la manera m\'as eficiente. 
+\end{smallbluetext} 
+};
+\end{frame}
+
+
+\begin{frame}{Como crear el indice del documento}
+\begin{enumerate}
+\item Desarrolle una versi\'on inicial con secciones y subsecciones.
+\item Iterar las veces que sea necesario sobre la versi\'on inicial agregando/quitando todas las subsecciones que sean necesarias.
+\item Identificar figuras y tablas claves por subsecci\'on.
+\item Note que cada subsecci\'on se convierte en el tema para desarrollar un párrafo.
+\end{enumerate}
+\end{frame}
+
 %%%%%%%%
 
 \section{Estructura del documento}
@@ -160,12 +198,12 @@ Estructura general de un documento de proyecto de tesis:
 El titulo debe reflejar y ser congruente con el \alert{objetivo principal}. El t\'itulo debe cumplir dos funciones:
 \begin{itemize}
 \item \alert{Atraer} a otros para leer el documento
-\item Proporcionar la \alert{mejor informacion posible} para, e.j. agilizar la busqueda
+\item Proporcionar la \alert{mejor información posible} para, e.j. agilizar la búsqueda
 \end{itemize}
 \emph{¿Como construir un buen titulo?}
 \begin{enumerate}
 \item Escoger las \alert{palabras claves} en su proyecto.
-\item Ordernar las palabras claves de acuerdo con su \alert{importancia}.
+\item Ordenar las palabras claves de acuerdo con su \alert{importancia}.
 \item Construya el titulo colocando las \alert{palabras} de acuerdo con el \alert{orden de importancia}.
 \item Si el titulo es \alert{muy largo}, \alert{borre} las palabras menos importantes. 
 \end{enumerate}
@@ -195,9 +233,9 @@ Es una \alert{mini t\'esis} o trabajo. Generalmente es lo que primero y lo que \
 Componentes esenciales de un resumen
 \begin{enumerate}
 \item ¿Cual es la motivaci\'on o justificaci\'on del proyecto? \alert{¿Porqu\'e?}
-\item ¿Que metodologia, sitio de estudio y datos se usaron en el proyecto? \alert{¿C\'omo?}
-\item ¿Que se encontro (resultados) despues de desarrolar el proyecto? \alert{Resultados principales}
-\item ¿Cual es la conclusi\'on con base en los resultados encontrados?\alert{Conclusion principal}
+\item ¿Que metodología, sitio de estudio y datos se usaron en el proyecto? \alert{¿C\'omo?}
+\item ¿Que se encontró (resultados) después de desarrollar el proyecto? \alert{Resultados principales}
+\item ¿Cual es la conclusi\'on con base en los resultados encontrados?\alert{Conclusión principal}
 \end{enumerate}
 \end{minipage}
 \end{frame}
@@ -213,7 +251,183 @@ Componentes esenciales de un resumen
 \end{frame}
 
 \begin{frame}{Introducci\'on}
+\begin{columns}[T]
+\column{0.5\textwidth}
+\begin{itemize}
+\item Definir el alcance de el estudio
+\item Definir el problema 
+\item Establecer el objetivo
+\item Identificar vacíos en el tema
+\item Establecer el propósito del experimento
+\item Resumir los bases del estudio
+\item Establecer la pregunta de investigaci\'on
+\item Proveer un contexto del proyecto
+\item Explicar la teoría involucrada
+\item Presentar una hip\'otesis
+\end{itemize}
+\column{0.5\textwidth}
+\begin{itemize}
+\item ¿De que es exactamente el trabajo?
+\item ¿Por que el trabajo es importante?
+\item ¿Que se necesita para entender el trabajo?
+\item ¿Como el trabajo sera presentado?
+\end{itemize}
+\end{columns}
+\end{frame}
 
+\begin{frame}{Introducci\'on}
+The topdown approach
+\tikzoverlay[text width=1.5cm] at (-4.3cm,-1cm) {
+\begin{tikzpicture} 
+% \node[regular polygon,regular polygon sides=3, draw, fill=blue!20, shape border rotate=180] at (-4cm,0){Introducci\'on};
+ \node[regular polygon,regular polygon sides=3, draw, fill=blue!20, shape border rotate=180] at (current page.center){Introducci\'on};
+\end{tikzpicture}
+};
+\tikzoverlay[text width=4.5cm] at (2.3cm,-1cm) {
+\alert{What is the status quo?}
+};
+\tikzoverlay[text width=4.5cm] at (2.3cm,-3cm) {
+\alert{What is wrong with the status quo?}
+};
+\tikzoverlay[text width=4.5cm] at (2.3cm,-5cm) {
+\alert{How does my project/paper go beyond the status quo?}
+};
+\end{frame}
+
+\begin{frame}{Introducci\'on}
+Leer el siguiente \href{https://doi.org/10.1029/2023WR034875}{\alert{paper}} y determine las partes que componen "the topdown approach".
+\end{frame}
+
+\begin{frame}{Metodología}
+
+\begin{itemize}
+\item Se describe lo que se hizo. 
+\item \alert{Relativamente fácil de escribir porque no requiere interpretaciones.}
+\item Comúnmente conformada por:
+\begin{itemize}
+\item Caso de estudio. E.j. Lugar geogr\'afico.
+\item Informaci\'on: E.j. Series temporales de precipitación del IDEAM.
+\item Métodos anal\'iticos/num\'ericos. E.j. Solución de las ecuaciones de Saint-Venant.
+\item Métodos estadístico. E.j. Regresiones multivariadas.
+\item Experimentos. En campo o en laboratorio.
+\item Diseños de instrumentos.
+\end{itemize}
+\end{itemize}
+\tikzoverlay[text width=8.5cm] at (1.5cm,-0.5cm) {
+\centering
+\begin{smallbluetext}
+\large Un lector debe ser capaz de reproducir lo que se realiz\'o de acuerdo a lo descrito en la metodolog\'ia
+\end{smallbluetext} 
+};
+\end{frame}
+
+
+\begin{frame}{Metodolog\'ia}
+Leer el siguiente \href{https://doi.org/10.1029/2023WR034875}{\alert{paper}} y determine los m\'etodos, zona de estudio e informaci\'on utilizada.
+\end{frame}
+
+
+\begin{frame}{Resultados}
+\begin{itemize}
+\item Descripci\'on de los resultados.
+\item Es recomendable separar los resultados de la discusi\'on para preservar la objetividad de los primeros.
+\item El lector debe formarse una idea general de lo que se encontró antes de la discusi\'on.
+\item La separaci\'on, facilita la comparación y diferenciación con otros resultados que se incluyen en la discusi\'on.
+\item Es importante tener la discusi\'on en la mente durante la escritura de los resultados. 
+\item Sirven para confirmar o refutar la hipótesis descrita en la introducci\'on. 
+\end{itemize}
+\tikzoverlay[text width=8.5cm] at (1.5cm,-0.5cm) {
+\centering
+\begin{smallbluetext}
+\large Los resultados y nada m\'as que los resultados.
+\end{smallbluetext} 
+};
+\end{frame}
+
+\begin{frame}{Resultados}
+Los resultados se presentan a trav\'es de:
+\begin{enumerate}
+\item Texto
+\item Figuras: gr\'aficas, infograf\'ias, planos
+\item Tablas
+\end{enumerate}
+\begin{itemize}
+\item Las tablas y las figuras deben comprenderse por si solas. 
+\item Las tablas y las figuras no deben repetirse dentro del texto. Deben servir para ilustrar.
+\item Una buena tabla debe presentar los números de tal manera que ser resalten caracter\'isticas, patrones y excepciones.
+\item Gráficas son mas apropiadas para mostrar carater\'isticas \alert{cualitativas} de los datos.
+\item Tablas son mas apropiadas para mostrar carater\'isticas \alert{quantitativas} (cifras exactas) de los datos.
+\item Es recomendable usar estadísticas en la descripci\'on de los resultados.
+\end{itemize}
+\tikzoverlay[text width=8.5cm] at (1.5cm,-0.5cm) {
+\centering
+\begin{smallbluetext}
+\Large Las figuras y las tablas deben ser un apoyo al texto; no lo contrario.
+\end{smallbluetext} 
+};
+\end{frame}
+
+\begin{frame}{Resultados}
+Leer los resultados del siguiente \href{https://doi.org/10.1029/2023WR034875}{\alert{paper}} y determinar:
+\begin{enumerate}
+\item Los resultados mas importantes de acuerdo con la hipótesis del paper.
+\item ¿Las figuras y las tablas se describen por si solas?
+\item Uso de estadísticas para la descripci\'on de los resultados. 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Discusi\'on}
+\begin{itemize}
+\item Discusión de los resultados obtenidos (¡no los resultados de otros!)
+\item Se enfatiza en la relación con otros resultados similares.
+\item Se discute como los resultados afectan el mundo real.
+\item No es una revisi\'on de la literatura. Las referencias citadas deben soportar y dar significado a los argumentos. 
+\item Frases como:\alert{"Brown (2005) encontr\'o X, pero Black (2006) encontr\'o Y. Yo encontré Y por lo tanto mis resultados soportan los de Black (2006)"} no son adecuadas
+\item En lugar: \alert{"Yo encontré Y y por lo tanto mis resultados son acordes con lo encontrado por Black (2006), pero no por los resultados de Brown (2005) quien encontr\'o X"}. Inicie con sus resultados y luego busque autores que se asemejen o se alejen de los suyos.
+\end{itemize}
+\tikzoverlay[text width=10.5cm] at (0.6cm,0.3cm) {
+\centering
+\begin{smallbluetext}
+El propósito de la discusi\'on es generar conclusiones
+\end{smallbluetext} 
+};
+\end{frame}
+
+\begin{frame}{Discusi\'on}
+\begin{itemize}
+\item Todo argumento que usted desarrolle debe terminar en una conclusi\'on (en un p\'arrafo).
+\item Cada conclusi\'on debe surgir del razonamiento del porque, por ejemplo, sus resultados son diferentes/iguales a los de otros, y las implicaciones que esto tiene en el mundo real y futuras investigaciones. 
+\item Las conclusiones pueden ser resultados nuevos que resuelven el problema en discusi\'on, \alert{recomendaciones}, \alert{especulaciones} que generen nuevas hipótesis, nuevos principios o pueden ser no concluyentes por falta de evidencia.
+\item La técnica para desarrollar un argumento en la discusi\'on es idéntica a la utilizada para desarrollar un buen párrafo:\emph{1. Idea introductoria principal del párrafo}, \emph{2. Desarrollo l\'ogico} y \emph{3. Conclusión del párrafo}.
+\end{itemize}
+\tikzoverlay[text width=10.5cm] at (0.6cm,0.3cm) {
+\centering
+\begin{smallbluetext}
+La discusi\'on es una colecci\'on de argumentos acerca de la relevancia, la utilidad y las limitaciones de los resultados, y las posibilidades de nuevas investigaciones.
+\end{smallbluetext} 
+};
+\end{frame}
+
+\begin{frame}{Discusi\'on}
+Leer la discusi\'on del siguiente \href{https://doi.org/10.1029/2023WR034875}{\alert{paper}} y determinar:
+\begin{enumerate}
+\item En cada párrafo analizar la idea principal y la conclusi\'on.
+\item Determinar si los argumentos son: conclusiones de algún problema planteado, recomendaciones, especulaciones, etc.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Conclusiones}
+\begin{itemize}
+\item Resultados claves y futuras ideas de investigaci\'on.
+\item Conclusiones generadas en la discusi\'on.
+\item Limitaciones del estudio.
+\end{itemize}
+\tikzoverlay[text width=10.5cm] at (0.6cm,0.3cm) {
+\centering
+\begin{smallbluetext}
+\Large Las conclusiones son: Take home messages
+\end{smallbluetext} 
+};
 \end{frame}
 
 
