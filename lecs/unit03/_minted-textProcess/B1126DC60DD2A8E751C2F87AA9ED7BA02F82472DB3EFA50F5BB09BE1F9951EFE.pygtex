@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c}{\PYGZpc{} no tan bueno:}
+Sean a y b distintos n\PYG{k}{\PYGZbs{}\PYGZsq{}}umeros
+enteros positivos, y digamos
+que c = a \PYGZhy{} b + 1.
+\PYG{c}{\PYGZpc{} mucho mejor:}
+Sean \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a}\PYG{l+s}{\PYGZdl{}} y \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{b}\PYG{l+s}{\PYGZdl{}} distintos n\PYG{k}{\PYGZbs{}\PYGZsq{}}umeros
+enteros positivos, y digamos
+que  \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{c }\PYG{o}{=}\PYG{n+nb}{ a }\PYG{o}{\PYGZhy{}}\PYG{n+nb}{ b }\PYG{o}{+}\PYG{n+nb}{ }\PYG{l+m}{1}\PYG{l+s}{\PYGZdl{}}.
+\end{Verbatim}

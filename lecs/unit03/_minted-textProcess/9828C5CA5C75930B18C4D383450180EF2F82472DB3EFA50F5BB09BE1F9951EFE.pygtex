@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+Las ra\PYG{k}{\PYGZbs{}\PYGZsq{}}ices de una ecuaci\PYG{k}{\PYGZbs{}\PYGZsq{}}on
+cuadr\PYG{k}{\PYGZbs{}\PYGZsq{}}atica est\PYG{k}{\PYGZbs{}\PYGZsq{}}an dadas por
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+x = \PYG{k}{\PYGZbs{}frac}\PYG{n+nb}{\PYGZob{}}\PYGZhy{}b \PYG{k}{\PYGZbs{}pm} \PYG{k}{\PYGZbs{}sqrt}\PYG{n+nb}{\PYGZob{}}b\PYG{n+nb}{\PYGZca{}}2 \PYGZhy{} 4ac\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+    \PYG{n+nb}{\PYGZob{}}2a\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+donde \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{a}\PYG{l+s}{\PYGZdl{}}, \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{b}\PYG{l+s}{\PYGZdl{}} and \PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{c}\PYG{l+s}{\PYGZdl{}} son \PYG{k}{\PYGZbs{}ldots}
+\end{Verbatim}

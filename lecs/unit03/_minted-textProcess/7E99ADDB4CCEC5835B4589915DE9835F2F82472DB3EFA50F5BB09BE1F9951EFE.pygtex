@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+ Comillas simple: `texto\PYGZsq{}.
+
+ Comillas dobles: ``texto\PYGZsq{}\PYGZsq{}.
+\end{Verbatim}

@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Introducci\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+
+El problema de \PYG{k}{\PYGZbs{}ldots}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}M\PYG{k}{\PYGZbs{}\PYGZsq{}}etodo\PYG{n+nb}{\PYGZcb{}}
+
+Investigamos  \PYG{k}{\PYGZbs{}ldots}
+
+\PYG{k}{\PYGZbs{}subsection}\PYG{n+nb}{\PYGZob{}}Preparaci\PYG{k}{\PYGZbs{}\PYGZsq{}}on de la Muestra\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}subsection}\PYG{n+nb}{\PYGZob{}}Recolecci\PYG{k}{\PYGZbs{}\PYGZsq{}}on de datos\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Resultados\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Conclusiones\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\end{Verbatim}

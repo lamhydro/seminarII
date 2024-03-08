@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+La Figura \PYG{k}{\PYGZbs{}ref}\PYG{n+nb}{\PYGZob{}}fig:logo\PYG{n+nb}{\PYGZcb{}} 
+muestra \PYG{k}{\PYGZbs{}ldots}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}centering}
+\PYG{k}{\PYGZbs{}includegraphics}[\PYG{c}{\PYGZpc{}}
+  width=0.3\PYG{k}{\PYGZbs{}textwidth}]\PYG{n+nb}{\PYGZob{}}logo\PYG{n+nb}{\PYGZus{}}la\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}caption}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}fig:logo\PYG{n+nb}{\PYGZcb{}} unal.\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}figure\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+
+\end{Verbatim}

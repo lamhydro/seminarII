@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}amsmath\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} para \PYGZbs{}eqref}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}Introducti\PYG{k}{\PYGZbs{}\PYGZsq{}}on\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}sec:intro\PYG{n+nb}{\PYGZcb{}}
+
+En la Sección \PYG{k}{\PYGZbs{}ref}\PYG{n+nb}{\PYGZob{}}sec:metodo\PYG{n+nb}{\PYGZcb{}},
+we \PYG{k}{\PYGZbs{}ldots}
+
+\PYG{k}{\PYGZbs{}section}\PYG{n+nb}{\PYGZob{}}M\PYG{k}{\PYGZbs{}\PYGZsq{}}etodo\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}sec:metodo\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}label}\PYG{n+nb}{\PYGZob{}}eq:euler\PYG{n+nb}{\PYGZcb{}}
+e\PYG{n+nb}{\PYGZca{}\PYGZob{}}i\PYG{k}{\PYGZbs{}pi}\PYG{n+nb}{\PYGZcb{}} + 1 = 0
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}equation\PYG{n+nb}{\PYGZcb{}}
+
+Por \PYG{k}{\PYGZbs{}eqref}\PYG{n+nb}{\PYGZob{}}eq:euler\PYG{n+nb}{\PYGZcb{}}, Tenemos \PYG{k}{\PYGZbs{}ldots}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

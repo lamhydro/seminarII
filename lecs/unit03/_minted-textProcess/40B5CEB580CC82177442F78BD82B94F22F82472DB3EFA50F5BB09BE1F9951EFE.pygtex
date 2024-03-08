@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}mu}\PYG{n+nb}{ }\PYG{o}{=}\PYG{n+nb}{ A e\PYGZca{}\PYGZob{}Q}\PYG{o}{/}\PYG{n+nb}{RT\PYGZcb{}}\PYG{l+s}{\PYGZdl{}}
+
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nv}{\PYGZbs{}Omega}\PYG{n+nb}{ }\PYG{o}{=}\PYG{n+nb}{ }\PYG{n+nv}{\PYGZbs{}sum}\PYG{n+nb}{\PYGZus{}\PYGZob{}k}\PYG{o}{=}\PYG{l+m}{1}\PYG{n+nb}{\PYGZcb{}\PYGZca{}\PYGZob{}n\PYGZcb{} }\PYG{n+nv}{\PYGZbs{}omega}\PYG{n+nb}{\PYGZus{}k}\PYG{l+s}{\PYGZdl{}}
+\end{Verbatim}

@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} por vi\PYGZbs{}\PYGZti{}netas}
+\PYG{k}{\PYGZbs{}item} Galletas
+\PYG{k}{\PYGZbs{}item} T\PYG{k}{\PYGZbs{}\PYGZsq{}}e
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}itemize\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}enumerate\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} por n\PYGZbs{}\PYGZsq{}umeros}
+\PYG{k}{\PYGZbs{}item} Galletas
+\PYG{k}{\PYGZbs{}item} T\PYG{k}{\PYGZbs{}\PYGZsq{}}e
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}enumerate\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

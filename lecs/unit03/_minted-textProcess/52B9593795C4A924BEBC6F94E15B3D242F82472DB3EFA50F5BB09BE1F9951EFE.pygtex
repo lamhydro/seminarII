@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{F\PYGZus{}n }\PYG{o}{=}\PYG{n+nb}{ F\PYGZus{}n}\PYG{o}{\PYGZhy{}}\PYG{l+m}{1}\PYG{n+nb}{ }\PYG{o}{+}\PYG{n+nb}{ F\PYGZus{}n}\PYG{o}{\PYGZhy{}}\PYG{l+m}{2}\PYG{l+s}{\PYGZdl{}}     \PYG{c}{\PYGZpc{} oops!}
+
+\PYG{l+s}{\PYGZdl{}}\PYG{n+nb}{F\PYGZus{}n }\PYG{o}{=}\PYG{n+nb}{ F\PYGZus{}\PYGZob{}n}\PYG{o}{\PYGZhy{}}\PYG{l+m}{1}\PYG{n+nb}{\PYGZcb{} }\PYG{o}{+}\PYG{n+nb}{ F\PYGZus{}\PYGZob{}n}\PYG{o}{\PYGZhy{}}\PYG{l+m}{2}\PYG{n+nb}{\PYGZcb{}}\PYG{l+s}{\PYGZdl{}} \PYG{c}{\PYGZpc{} ok!}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}includegraphics}[
+width=0.5\PYG{k}{\PYGZbs{}textwidth}]\PYG{n+nb}{\PYGZob{}}logo\PYG{n+nb}{\PYGZus{}}la\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}includegraphics}[
+width=0.3\PYG{k}{\PYGZbs{}textwidth},
+angle=270]\PYG{n+nb}{\PYGZob{}}logo\PYG{n+nb}{\PYGZus{}}la\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

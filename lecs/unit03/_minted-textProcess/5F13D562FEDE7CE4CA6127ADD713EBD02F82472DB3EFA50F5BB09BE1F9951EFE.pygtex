@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}\PYGZob{}}|l|r|r|\PYG{n+nb}{\PYGZcb{}}    \PYG{k}{\PYGZbs{}hline}
+  Art.   \PYG{n+nb}{\PYGZam{}} Cant. \PYG{n+nb}{\PYGZam{}} Uni.\PYG{k}{\PYGZbs{}\PYGZdl{}} \PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}hline}
+  DVD    \PYG{n+nb}{\PYGZam{}} 1     \PYG{n+nb}{\PYGZam{}} 19.99  \PYG{k}{\PYGZbs{}\PYGZbs{}}
+  Sonido \PYG{n+nb}{\PYGZam{}} 2     \PYG{n+nb}{\PYGZam{}} 39.99  \PYG{k}{\PYGZbs{}\PYGZbs{}}
+  Cable  \PYG{n+nb}{\PYGZam{}} 3     \PYG{n+nb}{\PYGZam{}} 1.99   \PYG{k}{\PYGZbs{}\PYGZbs{}\PYGZbs{}hline}
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}tabular\PYG{n+nb}{\PYGZcb{}}
+\end{Verbatim}

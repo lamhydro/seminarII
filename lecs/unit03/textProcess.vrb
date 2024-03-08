@@ -1,0 +1,17 @@
+\frametitle{bib\TeX }
+\begin{itemize}
+  \item Utilice el paquete \bftt{natbib} \footnote{Hay un nuevo
+      paquete con más características llamado \bftt{biblatex} pero la
+      mayoría de las plantillas para artículos todavía utiliza
+      \bftt{natbib}.} con \cmdbs{citet} y \cmdbs{citep}.
+  \item Las referencias bibliográficas van al final del texto con el
+    comando \cmdbs{bibliography}, y luego se especifica el estilo con
+    \cmdbs{bibliographystyle}.
+  \end{itemize}
+  \begin{minipage}{0.55\linewidth}
+    \inputminted[fontsize=\scriptsize,frame=single,resetmargins]{latex}%
+    {bib-example.tex}
+  \end{minipage}
+  \begin{minipage}{0.35\linewidth}
+    \includegraphics[width=\textwidth,clip,trim=1.8in 5in 1.8in 1in]{bib-example.pdf}
+  \end{minipage}

@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}natbib\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}citet}\PYG{n+nb}{\PYGZob{}}Brooks1997Methodology\PYG{n+nb}{\PYGZcb{}} muestra 
+que \PYG{k}{\PYGZbs{}ldots}. Evidentemente todos 
+los n\PYG{k}{\PYGZbs{}\PYGZsq{}}umeros impares son primos 
+\PYG{k}{\PYGZbs{}citep}\PYG{n+nb}{\PYGZob{}}Jacobson1999Towards\PYG{n+nb}{\PYGZcb{}}.
+
+\PYG{k}{\PYGZbs{}bibliography}\PYG{n+nb}{\PYGZob{}}bib\PYGZhy{}example\PYG{n+nb}{\PYGZcb{}} 
+\PYG{c}{\PYGZpc{} Siendo `bib\PYGZhy{}example\PYGZsq{} el nombre}
+\PYG{c}{\PYGZpc{} de su archivo bib}
+
+\PYG{k}{\PYGZbs{}bibliographystyle}\PYG{n+nb}{\PYGZob{}}plainnat\PYG{n+nb}{\PYGZcb{}}
+\PYG{c}{\PYGZpc{} Intente cambiar a abbrvnat}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\end{Verbatim}

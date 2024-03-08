@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+na}{[a4paper,11pt]}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{c}{\PYGZpc{} Paquetes}
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}latexsym,amssymb\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Paquetes de simbolos especiales }
+\PYG{k}{\PYGZbs{}usepackage}\PYG{n+nb}{\PYGZob{}}graphicx\PYG{n+nb}{\PYGZcb{}} \PYG{c}{\PYGZpc{} Paquete para insertar figuras}
+
+\PYG{c}{\PYGZpc{} Comandos}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cmd}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}\PYGZob{}}\PYG{k}{\PYGZbs{}color}\PYG{n+na}{[HTML]}\PYG{n+nb}{\PYGZob{}}008000\PYG{n+nb}{\PYGZcb{}}\PYG{k}{\PYGZbs{}bftt}\PYG{n+nb}{\PYGZob{}}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bs}\PYG{n+nb}{\PYGZcb{}\PYGZob{}}\PYG{k}{\PYGZbs{}char}`\PYG{k}{\PYGZbs{}\PYGZbs{}}\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}newcommand}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cmdbs}\PYG{n+nb}{\PYGZcb{}}[1]\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}cmd}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}bs}\PYGZsh{}1\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+\end{Verbatim}

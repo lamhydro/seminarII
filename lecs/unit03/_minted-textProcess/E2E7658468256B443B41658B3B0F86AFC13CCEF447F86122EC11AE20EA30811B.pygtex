@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{\PYGZbs{}documentclass}\PYG{n+nb}{\PYGZob{}}article\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}title}\PYG{n+nb}{\PYGZob{}}El t\PYG{k}{\PYGZbs{}\PYGZsq{}}itulo\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}author}\PYG{n+nb}{\PYGZob{}}A. Autor\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}date}\PYG{n+nb}{\PYGZob{}}\PYG{k}{\PYGZbs{}today}\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+\PYG{k}{\PYGZbs{}maketitle}
+
+\PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}abstract\PYG{n+nb}{\PYGZcb{}}
+El Resumen va aqu\PYG{k}{\PYGZbs{}\PYGZsq{}}i
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}abstract\PYG{n+nb}{\PYGZcb{}}
+
+\PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}document\PYG{n+nb}{\PYGZcb{}}
+
+\end{Verbatim}

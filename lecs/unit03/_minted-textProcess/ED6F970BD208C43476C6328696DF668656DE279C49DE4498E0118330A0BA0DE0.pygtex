@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+@Article\PYG{n+nb}{\PYGZob{}}Jacobson1999Towards,
+  author = \PYG{n+nb}{\PYGZob{}}Van Jacobson\PYG{n+nb}{\PYGZcb{}},
+  title = \PYG{n+nb}{\PYGZob{}}Towards the Analysis of Massive Multiplayer Online
+           Role\PYGZhy{}Playing Games\PYG{n+nb}{\PYGZcb{}},
+  journal = \PYG{n+nb}{\PYGZob{}}Journal of Ubiquitous Information\PYG{n+nb}{\PYGZcb{}},
+  Month = jun,
+  Year = 1999,
+  Volume = 6,
+  Pages = \PYG{n+nb}{\PYGZob{}}75\PYGZhy{}\PYGZhy{}83\PYG{n+nb}{\PYGZcb{}\PYGZcb{}}
+
+@InProceedings\PYG{n+nb}{\PYGZob{}}Brooks1997Methodology,
+  author = \PYG{n+nb}{\PYGZob{}}Fredrick P. Brooks and John Kubiatowicz and
+            Christos Papadimitriou\PYG{n+nb}{\PYGZcb{}},
+  title = \PYG{n+nb}{\PYGZob{}}A Methodology for the Study of the
+           Location\PYGZhy{}Identity Split\PYG{n+nb}{\PYGZcb{}},
+  booktitle = \PYG{n+nb}{\PYGZob{}}Proceedings of OOPSLA\PYG{n+nb}{\PYGZcb{}},
+  Month = jun,
+  Year = 1997\PYG{n+nb}{\PYGZcb{}}
+
+\end{Verbatim}
