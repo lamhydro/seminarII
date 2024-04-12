@@ -24,6 +24,7 @@ aspectratio=169,
 \usepackage{tikz}
 \usetikzlibrary{shapes,snakes}
 \usetikzlibrary{fadings}
+\usetikzlibrary{arrows.meta}
 %
 %\setbeamertemplate{sections/subsections in toc}[ball]
 %\usepackage{xeCJK}
@@ -52,6 +53,33 @@ aspectratio=169,
 		\textbf{\tableofcontents[currentsection, currentsubsection]} %
 	\end{frame}%
 }
+
+%% listing for python snips
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+
 
 \title{Introducci\'on a Python}
 \subtitle{Comandos b\'asicos y gr\'aficas en Python}
@@ -210,26 +238,671 @@ Ventajas de Python
 \item Abra la termninal (busque \co{cmd})
 \item Para ejecutar el programa: \co{python3 myprogram.py} o \co{python myprogram.py}
 \end{enumerate}
+\item Salir de Python:
+\begin{enumerate}
+\item $> > >$ \co{exit()}
+\item $> > >$ \co{quit()}
+%\item \fbox{\begin{minipage} Ctrl \end{minipage}}
+\item \fbox{Ctrl} + \fbox{D}
+\end{enumerate}
 
 \end{enumerate}
 
 \end{frame}
 
 
+\begin{frame}[c]{?`Como ejecutar un programa de Python?}
+\begin{enumerate}
+\item Abra un archivo nuevo en su editor de texto (e.g. \co{vi/vim}, \co{emacs}, \co{notepad})
+\item Nombre su archivo como e.g. \co{myprogram.py}
+\item Dentro de ese archivo escribir:
+\begin{minipage}[t]{\linewidth}
+\centering
+\begin{tikzpicture}
+\node [anchor=west, text=green] at (0,1) {\#!/usr/bin/python};
+\node [anchor=west, text=green] at (0,0.5) {\# -*- coding: UTF-8 -*-};
+\node [anchor=west, text=blue] at (0,0) {};
+\node [anchor=west, text=blue] at (0,-0.5) {\# Mi primer programa};
+\node [anchor=west] at (0,-1.0) {print('Hello, world!')};
+\end{tikzpicture}
+\end{minipage}
+\item En la consola de comandos, asegurese que usted esta en el directorio que contiene \co{myprogram.py}.
+\item Ejecutar el programa como: \co{python3 myprogram.py} o \co{python myprogram.py}
+\item Note que el \co{myprogram.py} puede leer parametros de entrada: \co{python3 myprogram.py} \co{para1} \co{para2} $\cdots$ \co{paran}
+
+\end{enumerate}
+\end{frame}
 
 %---
 \section{Comandos b\'asicos en Python}
-\begin{frame}[c]{Tipos de datos en Python}
+\begin{frame}[c]{Primer comando en Python}
+\begin{tikzpicture}[node distance=12em]
+\node(G) [text=blue] {$> > >$ print('Hello, world!')};
+\node(G1) [right of=G, text=red]  {Python command};
+\node(H)  [align=left] [below=0.7cm] {Hello, world!};
+\node(H1) [right of=H,text=red]  {Command output};
+\end{tikzpicture}
+
 \end{frame}
 
-\begin{frame}[c]{Objetos en Python}
+\begin{frame}[c]{Tipos de datos y operaciones en Python}
+\begin{columns}
+\column{0.7\textwidth}
+\begin{itemize}
+\item integers $\rightarrow$ $4$\ $15110$\ $-53$\ $0$
+\item Floating point numbers $\rightarrow$ $4.0$ $0.80333333333$ $7.34e+014$
+\item Strings  $\rightarrow$ "hello” "A" " " ”” 'there' '"' '15110'
+\item Booleans $\rightarrow$ \texttt{True} \texttt{False}
+\item Literal none $\rightarrow$ \texttt{None}
+\end{itemize}
+\column{0.3\textwidth}
+\begin{itemize}
+\item $+$ Addition 
+\item $-$ Substraction 
+\item $*$ Multiplication
+\item $/$ Division
+\item // Integer division
+\item $**$ Exponentiation
+\item \% Modulo (remainder)
+\end{itemize}
+\end{columns}
+El interprete de python es como una calculadora:
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node(G) [text=blue] {$> > >$ 2+3*5};
+\node(H)  [align=right] [below=0.4cm] {17};
+\end{tikzpicture}
+\end{minipage}
+Orden de evaluaci\'on de los operadores
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}[node distance=8em]
+\node(A) [text=red] {()};
+\node(B) [right of=A,text=red] {**};
+\node(C) [right of=B,text=red] {* / \%};
+\node(D) [right of=C,text=red] {+ -};
+\draw[line width=1pt, double distance=2pt, -{Stealth[length=5mm, open]}]    (A.east) --     (B.west);
+\draw[line width=1pt, double distance=2pt, -{Stealth[length=5mm, open]}] (B.east) --     (C.west);
+\draw[line width=1pt, double distance=2pt, -{Stealth[length=5mm, open]}] (C.east) --     (D.west);
+\end{tikzpicture}
+\end{minipage}
 \end{frame}
 
-\begin{frame}[c]{Condicionales en Python}
+
+\begin{frame}[c]{Operaciones logicas}
+\begin{columns}
+\column{0.3\textwidth}
+\begin{tabular}{c c}
+Matem\'aticas & Python \\ \hline
+$=$ & $==$ \\
+$\neq$ & $!=$ \\
+$<$ & $<$ \\
+$>$ & $>$ \\
+$\leq$ & $<=$ \\
+$\geq$ & $>=$ 
+\end{tabular}
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node(A) [anchor=west, text=blue] at (0,0.5) {$> > >$ a = 5};
+\node(B) [anchor=west, text=blue] at (0,0) {$> > >$ 5 < a < 10 };
+\node(C) [anchor=west, text=blue] at (0,-0.5) {True};
+\end{tikzpicture}
+\end{minipage}
+
+\column{0.7\textwidth}
+\begin{tikzpicture}
+\node [align=center](A) at (4,0) {
+\begin{tabular}{c c p{0.5\textwidth}}
+$=$ & \alert{varname} = {\color{blue} value} & Asginacion de  {\color{blue} value} a \alert{varname}\\
+$==$ & \alert{varname$_1$} = \alert{varname$_2$} & Comparaci\'on si \alert{varname$_1$} es igual a \alert{varname$_2$}
+\end{tabular}};
+\end{tikzpicture}
+Operadores boleanos: \alert{and}, \alert{or} y \alert{not}
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node(A) [anchor=west, text=blue] at (0,0.5) {$> > >$ 4 < 5 and 6 < 7};
+\node(B) [anchor=west, text=blue] at (0,0) {True};
+\node(C) [anchor=west, text=blue] at (0,-0.5) {$> > >$ 4 < 5 and 6 > 7};
+\node(D) [anchor=west, text=blue] at (0,-1) {False};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node(A) [anchor=west, text=blue] at (3,0.5) {$> > >$ 4 < 5 or 6 < 7};
+\node(B) [anchor=west, text=blue] at (3,0) {True};
+\node(C) [anchor=west, text=blue] at (3,-0.5) {$> > >$ 4 < 5 or 6 > 7};
+\node(D) [anchor=west, text=blue] at (3,-1) {True};
+\end{tikzpicture}
+\begin{tikzpicture}
+\node(A) [anchor=west, text=blue] at (0,-3.5) {$> > >$ not 6 < 7};
+\node(B) [anchor=west, text=blue] at (0,-4) {False};
+\node(C) [anchor=west, text=blue] at (0,-4.5) {$> > >$ not 6 > 7};
+\node(D) [anchor=west, text=blue] at (0,-5) {True};
+\end{tikzpicture}
+\end{minipage}
+\end{columns}
+
 \end{frame}
 
-\begin{frame}[c]{Loops en Python}
+\begin{frame}[c]{Expresiones y declaraciones}
+\begin{itemize}
+\item Python evalua una \alert{expresion} para obtener un resultado, e.g.:
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node(G) [text=blue] {$> > >$ 2.5 + sin(30)};
+\node(H)  [align=right] [below=0.4cm] {3};
+\end{tikzpicture}
+\end{minipage}
+
+\item Python ejecuta una \alert{declaraci\'on} para realizar una acci\'on que tiene un efecto, e.g.:
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node(G) [text=blue] {$> > >$ print('Hello, world!')};
+\node(H)  [align=right] [below=0.4cm] {Hello, world};
+\end{tikzpicture}
+\end{minipage}
+\end{itemize}
 \end{frame}
+
+\begin{frame}[c]{Variables}
+\begin{itemize}
+\item Es un lugar en la memoria donde se puede almacenar informacion.
+\item En Python, se almacena un valor en memoria a trav\'ez de una declaraci\'on de asignaci\'on.
+\item Una variable puede contener cualquier tipo de valor u objeto.
+\end{itemize}
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}[node distance=12em]
+\node(A) [anchor=west, text=blue] at (0,1) {$> > >$ a = 5};
+\node(B) [anchor=west, text=blue] at (0,0.5) {$> > >$ a};
+\node(C) [anchor=west] at (0,0) {5};
+\node(A1) [right of=A, text=red]  {Declaraci\'on de asignaci\'on};
+\node(A1) [right of=B, text=red]  {Expresi\'on};
+\node(C1) [right of=C, text=red]  {Output};
+\end{tikzpicture}
+\end{minipage}
+Note que {\color{blue}a} es una variable tipo \alert{integer} almacenada en la memoria. {\color{blue}a} puede ser utilizada como:
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}[node distance=12em]
+\node(A) [anchor=west, text=blue] at (0,1) {$> > >$ b = 2*a};
+\node(B) [anchor=west, text=blue] at (0,0.5) {$> > >$ b};
+\node(C) [anchor=west] at (0,0) {10};
+\node(A1) [right of=A, text=red]  {Declaraci\'on de asignaci\'on};
+\node(A1) [right of=B, text=red]  {Expresi\'on};
+\node(C1) [right of=C, text=red]  {Output};
+\end{tikzpicture}
+\end{minipage}
+Una variable {\color{blue}a} puede actualizarse:
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node [anchor=west, text=blue] at (0,1) {$> > >$ a = 5};
+\node [anchor=west, text=blue] at (0,0.5) {$> > >$ a = a + 5};
+\node [anchor=west, text=blue] at (0,0) {$> > >$ a};
+\node [anchor=west] at (0,-0.5) {10};
+\end{tikzpicture}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}[c]{Nombre de las variables}
+\begin{itemize}
+\item Todas las variables deben comenzar con una letra. Es recomendado iniciar con una letra minuscula.
+\item Las siguientes letras pueden ser mayusculas, minusculas o n\'umeros. 
+\item Los nombres de las variables son sensibles a las mayusculas y minusculas: 
+\begin{minipage}[t]{\linewidth}
+\vspace{0,5cm}
+\centering
+\begin{tikzpicture}
+\node(A) [anchor=west, text=blue] at (0,1) {var $\neq$ Var};
+\node(B) [anchor=west, text=blue] at (0,0) {a2 $\neq$ A2};
+\end{tikzpicture}
+\end{minipage}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[c]{Abreviaciones sintacticas}
+\begin{tabular}{c c c}
+varname $+=$ 10   & $\equiv$ &  varname $=$ varname $+$ 10 \\
+varname $-=$ 10   & $\equiv$ &  varname $=$ varname $-$ 10 \\
+varname $*=$ 10   & $\equiv$ &  varname $=$ varname $*$ 10 \\
+varname $/=$ 10   & $\equiv$ &  varname $=$ varname $/$ 10 \\
+varname $**=$ 10   & $\equiv$ &  varname $=$ varname $**$ 10 \\
+varname $\%=$ 10   & $\equiv$ &  varname $=$ varname $\%$ 10
+\end{tabular}
+\end{frame}
+
+\begin{frame}[c]{Estructuras de datos en Python}
+\co{list}: Una lista es una colecci\'on de datos
+\begin{itemize}
+\item Del mismo o de diferente tipo
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node [anchor=west, text=blue] at (0,1) {$> > >$ l1 = [1, 2, 4]};
+\node [anchor=west, text=blue] at (0,0.5) {$> > >$ l2 = [1.0, 'abc', 23, True]};
+\end{tikzpicture}
+\end{minipage}
+\item Pueden incluir listas dentro de listas
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node [anchor=west, text=blue] at (0,1) {$> > >$ l = [[1, 2, 4], [2.5, None],['ab1', 'ac2']]};
+\end{tikzpicture}
+\end{minipage}
+\item Una lista vacia se expresa como: 
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node [anchor=west, text=blue] at (0,1) {$> > >$ l = []};
+\end{tikzpicture}
+\end{minipage}
+\item Se pueden acceder a los elementos de una lista a trav\'es de indices
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}
+\node [anchor=west, text=blue] at (0,1) {$> > >$ l = [1, 2, 4, 10, 23]};
+\node [anchor=west, text=blue] at (0,0.5) {$> > >$ l[0]};
+\node [anchor=west, text=blue] at (0,0) {1};
+\node [anchor=west, text=blue] at (0,-0.5) {$> > >$ l[1:2]};
+\node [anchor=west, text=blue] at (0,-1) {2 4};
+\end{tikzpicture}
+\end{minipage}
+\end{itemize}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (11.3,5.3) {
+\begin{tabular}{p{0.1\textwidth} p{0.3\textwidth}}
+\co{count()} & Calcula el numero de elementos de una lista.\\
+\co{append()} & Adiciona un elemento al final de la lista.\\
+\co{clear()} & Remueve todos los elementos de una lista.\\
+\co{sort()} & Ordena los elementos de la list.\\
+\co{insert()} & Insert elementos en una posici\'on determinada.
+\end{tabular}};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{Estructuras de datos en Python}
+\begin{minipage}[t]{\linewidth}
+\begin{tikzpicture}[overlay]
+\node [text width=15cm](A) at (7,2.3) {
+\co{dictionary}: Es una colección de elementos, donde cada uno tiene una llave \alert{key} y un valor \alert{value}. Los diccionarios se pueden crear con paréntesis \{\} separando con una coma cada par \co{key: value}. En el siguiente ejemplo tenemos tres keys que son el nombre, la edad y el documento. 
+};
+\end{tikzpicture}
+\end{minipage}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,0.2) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python]
+d1 = {
+  "Nombre": "Sara",
+  "Edad": 27,
+  "Documento": 1003882
+}
+print(d1)
+#{'Nombre': 'Sara', 'Edad': 27, 'Documento': 1003882}
+\end{lstlisting}&
+\begin{lstlisting}[language=Python]
+d2 = dict([
+      ('Nombre', 'Sara'),
+      ('Edad', 27),
+      ('Documento', 1003882),
+])
+print(d2)
+#{'Nombre': 'Sara', 'Edad': '27', 'Documento': '1003882'}
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Diccionario anidado]
+d3 = dict(Nombre='Sara',
+          Edad=27,
+          Documento=1003882)
+print(d3)
+#{'Nombre': 'Sara', 'Edad': 27, 'Documento': 1003882}
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[fragile]{Estructuras de datos en Python}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,0.5) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python, title=Acceder y modificar elementos]
+print(d1['Nombre'])     #Sara
+print(d1.get('Nombre')) #Sara
+
+d1['Nombre'] = "Laura"
+print(d1)
+#{'Nombre': Laura', 'Edad': 27, 'Documento': 1003882}
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Iterar diccionario]
+# Imprime los key y value del diccionario
+for x, y in d1.items():
+    print(x, y)
+#Nombre Laura
+#Edad 27
+#Documento 1003882
+#Direccion Calle 123
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Diccionario anidado]
+anidado1 = {"a": 1, "b": 2}
+anidado2 = {"a": 1, "b": 2}
+d = {
+  "anidado1" : anidado1,
+  "anidado2" : anidado2
+}
+print(d)
+#{'anidado1': {'a': 1, 'b': 2}, 'anidado2': {'a': 1, 'b': 2}}
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (6,-2.5) {
+%M\'etodos y funciones para dictionarios
+\begin{columns}
+\column{0.99\textwidth}
+\begin{itemize}
+\item \co{clear()}: Elimina todo el contenido del diccionario.  
+\item \co{get(<key>[,<default>])}: Este m\'etodo nos permite consultar el \co{value} para un \co{key} determinado. 
+\item \co{items()}: Devuelve una lista con los keys y values del diccionario.
+\item \co{keys()}: Devuelve una lista con todas las keys del diccionario.
+\item \co{values()}: Devuelve una lista con todos los values del diccionario.
+\end{itemize}
+\end{columns}};
+\end{tikzpicture}
+\end{frame}
+
+
+\begin{frame}[fragile]{Otras estructuras de datos en Python}
+\begin{itemize}
+\item \co{tuple}: Es una colecci\'on de objetos o variables similar a una \co{list} en donde sus objetos son inmutables. Esto quiere decir que los objetos en un \co{tuple} no puden ser creados o removidos una vez creado el \co{tuple}. E.g. \co{Tuple = ('Geeks', 'For')}.
+\item \co{set}: Es una coleccion de datos en python la cual mutable similar a una lista y no permite duplicados de datos. E.g. \co{Set = set([1, 2, 'Geeks', 4, 'For', 6, 'Geeks'])} 
+\end{itemize}
+\end{frame}
+\begin{frame}[fragile]{Condicionales en Python}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (6.5,3) {
+\co{if ()} \co{elif:} \co{else:} son usadas para ejecutar expresiones dependiendo de una condicion logica
+};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,0.5) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python]
+a = 33
+b = 200
+if b > a:
+  print("b is greater than a")
+\end{lstlisting}
+producira: \co{b is greater than a}&
+\begin{lstlisting}[language=Python]
+a = 33
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+\end{lstlisting}
+producira: \co{a and b are equal} &
+\begin{lstlisting}[language=Python]
+a = 200
+b = 33
+if b > a:
+  print("b is greater than a")
+elif a == b:
+  print("a and b are equal")
+else:
+  print("a is greater than b")
+\end{lstlisting}
+producira: \co{a is greater than b} 
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,-3) {
+\begin{tabular}{p{0.49\textwidth} p{0.49\textwidth}}
+Formas compactas de escribir condicionales:
+\begin{lstlisting}[language=Python]
+a = 200
+b = 30
+if a > b: print("a is greater than b")
+\end{lstlisting}
+producira: \co{a is greater than b} & 
+\begin{lstlisting}[language=Python]
+a = 330
+b = 330
+print("A") if a > b else print("=")
+\end{lstlisting}
+producira: \co{$=$}
+\end{tabular}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[fragile]{Condicionales en Python}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (3.8,2.8) {
+Uso de operadores logicos \co{and}, \co{or} y \co{not} en condicionales
+};
+\end{tikzpicture}
+
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,1.3) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python]
+a = 200
+b = 33
+c = 500
+if a > b and c > a:
+  print("Both conditions are True")
+\end{lstlisting}
+producira: \co{Both conditions are True}&
+\begin{lstlisting}[language=Python]
+a = 200
+b = 33
+c = 500
+if a > b or a > c:
+  print("At least one of the conditions is True")
+\end{lstlisting}
+producira: \co{At least one of the conditions is True} &
+\begin{lstlisting}[language=Python]
+a = 33
+b = 200
+if not a > b:
+  print("a is NOT greater than b")
+\end{lstlisting}
+producira: \co{a is NOT greater than b} 
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,-2.5) {
+\begin{tabular}{p{0.49\textwidth} p{0.49\textwidth}}
+\begin{lstlisting}[language=Python,title=Condicional anidado]
+x = 41
+if x > 10:
+  print("Above ten,")
+  if x > 20:
+    print("and also above 20!")
+  else:
+    print("but not above 20.") 
+\end{lstlisting}
+producira: \co{Above ten,} y \co{and also above 20!}& 
+\begin{lstlisting}[language=Python,title=uso de \co{pass}]
+a = 33
+b = 200
+if b > a:
+  pass
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{Los \co{for} loops}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7.3,1.3) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python, title=Loop a trav\'es de una \alert{lista}]
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Loop a trav\'es de un \alert{string}]
+for x in "banana":
+  print(x)
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Uso de \co{break}]
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  print(x)
+  if x == "banana":
+    break
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,0) {
+\begin{columns}
+\column{0.30\textwidth}
+producir\'a: \\
+\co{apple} \\
+\co{banana} \\
+\co{cherry}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{b} \\
+\co{a} \\
+\co{n} \\
+\co{a} \\
+\co{n} \\
+\co{a}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{apple}
+\end{columns}};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[fragile]{Los \co{for} loops}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7.3,1.3) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python, title=Uso de \co{continue}]
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+  if x == "banana":
+    continue
+  print(x) 
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=La funci\'on \co{range()}]
+for x in range(6):
+  print(x)
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=La funci\'on \co{range()}]
+for x in range(2, 30, 3):
+  print(x)
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,-1) {
+\begin{columns}
+\column{0.30\textwidth}
+producir\'a: \\
+\co{apple} \\
+\co{cherry}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{0} \\
+\co{1} \\
+\co{.} \\
+\co{.} \\
+\co{.} \\
+\co{5}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{2} \\
+\co{5} \\
+\co{.} \\
+\co{.} \\
+\co{.} \\
+\co{29}
+
+\end{columns}};
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}[fragile]{Los \co{while} loops}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7.3,1.3) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python]
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Uso de \co{break}]
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1 
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Uso de \co{continue}]
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,-1) {
+\begin{columns}
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2}\\
+\co{3}\\
+\co{4}\\
+\co{5}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2} \\
+\co{3}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2} \\
+\co{4} \\
+\co{5} \\
+\co{6} 
+
+\end{columns}};
+\end{tikzpicture}
+
+\end{frame}
+
+\begin{frame}[c]{Ejercicio}
+\begin{block}{Calculo de la profundidad normal ($y_n$) en canales}
+Escribir un programa en Python para determinar la profundidad normal ($y_n$) en un canal trapezoidal cuya base ($b$) es 10 $m$, la pendiente longitudinal del canal ($S_o$) es 0.001, la pendiente lateral ($z$) es 2, el factor de rugosidad de Manning ($n$) es 0.013 y el caudal transportado ($Q$) es 30 m$^3$/s, utilizando la \emph{ecuaci\'on de Manning}:
+$$
+Q = \frac{1}{n}AR^{2/3}S_o^{1/2}
+$$
+Utilize el m\'etodo de \emph{Newton-Raphson}:
+$$
+x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}
+$$
+ para resolver la ecuaci\'on de Manning. 
+\end{block}
+\end{frame}
+
+
+
+
+
 
 \begin{frame}[c]{Leer datos externos}
 \end{frame}

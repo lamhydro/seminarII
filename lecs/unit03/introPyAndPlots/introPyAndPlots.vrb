@@ -1,0 +1,56 @@
+\frametitle{Los \co {while} loops}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7.3,1.3) {
+\begin{tabular}{p{0.32\textwidth} p{0.32\textwidth} p{0.32\textwidth}}
+\begin{lstlisting}[language=Python]
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Uso de \co{break}]
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+\end{lstlisting}&
+\begin{lstlisting}[language=Python, title=Uso de \co{continue}]
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
+\end{lstlisting}
+\end{tabular}};
+\end{tikzpicture}
+\begin{tikzpicture}[overlay]
+\node [align=center](A) at (7,-1) {
+\begin{columns}
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2}\\
+\co{3}\\
+\co{4}\\
+\co{5}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2} \\
+\co{3}
+
+\column{0.30\textwidth}
+producir\'a: \\
+\co{1} \\
+\co{2} \\
+\co{4} \\
+\co{5} \\
+\co{6}
+
+\end{columns}};
+\end{tikzpicture}
+
